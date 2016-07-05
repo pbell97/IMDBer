@@ -75,7 +75,7 @@ def getURL():
 	myurl = field.get()
 	field.delete( 0, len(myurl))
 	myText = urllib2.urlopen(myurl).read()
-	f = open('newSite.txt', 'r+')
+	f = open('newSite.txt', 'w+')
 	f.write(myText)	
 	getTitle();getDate();getRating();getRuntime()
 	
@@ -86,7 +86,7 @@ def getURL2():
 	myurl = root.clipboard_get()
 	root.destroy()
 	myText = urllib2.urlopen(myurl).read()
-	f = open('newSite.txt', 'r+')
+	f = open('newSite.txt', 'w+')
 	f.write(myText)	
 	getTitle();getDate();getRating();getRuntime()	
 	
